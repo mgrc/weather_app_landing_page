@@ -44,10 +44,18 @@ header {
 		margin: auto;
 	}
 	nav {
-		//display: flex;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		wrap: nowrap;
 		padding-top: 37px;
 		padding-left: 15px;
 		padding-right: 15px;
+			a {
+				text-decoration: none;
+				color: #ffffff;
+				margin-left: 55px;
+			}
 
 	}
 	.site_logo {
@@ -288,6 +296,35 @@ footer {
 	background-color: $c-footer-bg;
 		.conteinar {
 			padding-top: 100px;
+		}
+		.footer_navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			wrap: nowrap;
+			// padding-top: 37px;
+			// padding-left: 15px;
+			// padding-right: 15px;
+				li {
+					display: inline;
+					list-style-type: none;
+					margin-left: 55px;
+					font-size: 1.2rem;
+
+				}
+				.social_media img {
+					margin-left: 34px;
+				}
+		}
+		.copyrights {
+			margin-top: 50px;
+			text-align: right;
+			font-size: 1.2rem;
+			border-top: 1px solid #ffffff;
+		}
+		.copyrights::before {
+			content: "";
+			border-top: 1px solid #ffffff;
 		}
 }
 
