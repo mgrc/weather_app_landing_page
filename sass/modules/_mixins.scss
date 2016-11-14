@@ -1,25 +1,33 @@
-@import "allmq";
+// @import "allmq";
 
-$phone_device-max-width: 768px;
+$phone_device-max-width: 767px;
 
 @mixin phone {
 	@media (max-width: #{$phone_device-max-width}) {
 @content; }
 }
 
-$tablet_device-max-width: 1023px;
+// // $tablet_device-min-width: 768px;
+// // $tablet_device-max-width: 1023px;
 
 @mixin tablet {
-	@media (max-width: #{$tablet_device-max-width}) {
+	@media screen and (max-width: 1023px) {
 @content; }
 }
+ 
+
+
+// $desktop-width: 1024px;
+
+// @mixin desktop {
+// @media (min-width: #{$desktop-width}) {
+// @content; }
+// }
 
 
 
-$desktop-width: 1024px;
 
-@mixin desktop {
-@media (min-width: #{$desktop-width}) {
-@content; }
-}
 
+// @mixin ipad($orientation: all) {
+//   $device-min-width: 768px;
+//   $device-max-width: 1024px;

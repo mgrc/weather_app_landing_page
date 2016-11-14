@@ -6,6 +6,12 @@ body {
 	font-size: 62.5%;
 	font-family: 'Ubuntu', sans-serif;
 	color: $c-p;
+	// @include tablet {
+	// 		background-color: red;
+	// 	}
+	// @include phone {
+	// 		background-color: blue;
+	// 	}
 }
 
 h2 {
@@ -27,11 +33,15 @@ h3 {
 }
 .conteinar {
 		max-width: 1170px;
-		@media screen and (min-width: 1023px) {
-			background-color: green;
-		}
+		// @media screen and (min-width: 1023px) {
+		// 	background-color: green;
+		// }
+
 		@include tablet { 
 			max-width: 993px;
+		}
+		@include phone {
+			max-width: 737px;
 		}
 		margin: auto;
 }
@@ -49,6 +59,9 @@ header {
 		max-width: 1170px;
 		@include tablet {
 			max-width: 993px;
+		}
+		@include phone {
+			max-width: 737px;
 		}
 		margin: auto;
 	}
@@ -129,6 +142,9 @@ header {
 				max-height: 70vh;
 				// width: 50%;
 				// height: auto;
+				@include phone {
+					display: none;
+				}
 			}
 	}
 	.btn_scroll_down {
@@ -209,6 +225,11 @@ header {
 		max-width: 100%;
 		height: auto;
 		margin: 80px auto 0 auto;
+
+					@include phone {
+						display: none;
+					}
+				
 	}
 
 
@@ -321,6 +342,11 @@ header {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
+				img {
+					@include phone {
+						display: none;
+					}
+				}
 
 		}
 		.text_box {
@@ -373,7 +399,8 @@ footer {
 				.social_media img {
 					margin-left: 34px;
 				}
-		}
+				
+			}
 		.copyrights {
 			margin-top: 50px;
 			text-align: right;
