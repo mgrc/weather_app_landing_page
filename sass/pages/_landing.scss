@@ -48,6 +48,7 @@ h3 {
 
 header {
 	
+	
 	background: url(../img/first_screen_bg.png) no-repeat center center; //fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -120,7 +121,13 @@ header {
 }
 //====================================
 .first_screen {
+	
+	
 	.content_box {
+		@include phone {
+					padding-top: 200px;
+					//text-align: center;
+				}
 		font-size: 1.2rem;
 		color: #ffffff;
 		display: flex;
@@ -139,15 +146,19 @@ header {
 				margin-bottom: 60px;
 			}
 			img {
-				max-height: 70vh;
-				// width: 50%;
-				// height: auto;
 				@include phone {
 					display: none;
 				}
+				max-height: 70vh;
+				// width: 50%;
+				// height: auto;
+				
 			}
 	}
 	.btn_scroll_down {
+		@include phone {
+					display: none;
+				}
 			background-color: #ffffff;
 			font-size: 1.8rem;
 			display: block;
@@ -164,6 +175,7 @@ header {
 }
 //====================================
 .features_section {
+	
 	h2 {
 		margin-top: 135px;	
 	}
@@ -213,6 +225,7 @@ header {
 }
 //====================================
 .widgets {
+	
 	h2 {
 		margin-top: 200px;
 	}
@@ -227,7 +240,7 @@ header {
 		margin: 80px auto 0 auto;
 
 					@include phone {
-						display: none;
+						
 					}
 				
 	}
@@ -236,6 +249,7 @@ header {
 }
 //====================================
 .screenshots {
+
 	@include tablet {
 				margin: 0 25px;
 			}
@@ -249,6 +263,11 @@ header {
 	.single_screenshot {
 		margin-top: 160px;
 		margin-bottom: 190px;
+		 	@media (max-width: 767px) {
+		 		margin-top: 60px;
+				margin-bottom: 90px;
+		}
+
 			// .single_screenshot:last-child {
 			// 	margin-bottom: 120px;
 			// }
@@ -264,14 +283,35 @@ header {
 		p {
 			text-align: left;
 			line-height: 2;	
+
 		}
 		img {
 			margin-bottom: 50px;
+			@media (max-width: 767px) {
+				margin-bottom: 20px;
+		}
 		}
 	}
 }
+
+.single_screenshot > img:first-of-type  {
+		@media (max-width: 767px) {
+		display: none;
+
+
+}
+
+
+}
+
+
 //====================================
-.reviews { 
+.conteinar .reviews {
+	@media (max-width: 767px) {
+		 		margin: 0px 40px;
+		}
+}
+.reviews {
 	h2 {
 		margin-top: 200px;
 	}
@@ -317,9 +357,10 @@ header {
 	.all_reviews p {
 		text-align: left;
 		color: $c-h3;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		width: 550px;
 			span {
+				color: #999999;
 				font-size: 1.4rem;
 				line-height: 2.5;
 			}
@@ -333,6 +374,7 @@ header {
 }
 //====================================
 .download {
+
 	margin-top: 160px;
 	padding: 0;
 	height: 460px;
@@ -342,13 +384,16 @@ header {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
-				img {
-					@include phone {
-						display: none;
-					}
+				// img {
+				// 	@include phone {
+				// 		display: none;
+				// 	}
 				}
+			@include phone {
+				padding: 0px 40px;
+			}
 
-		}
+		
 		.text_box {
 			width: 500px;
 			padding-bottom: 100px;
@@ -368,13 +413,15 @@ header {
 			}
 		}
 }
-
+.download > .conteinar > img:first-of-type {
+	@include phone {
+		display: none;
+	}
+}
 
 //====================================
 footer {
-	@include tablet {
-				padding: 0 25px;
-			}
+	
 	width: 100vw;
 	height: 360px;
 	background-color: $c-footer-bg;
@@ -382,6 +429,9 @@ footer {
 			padding-top: 100px;
 		}
 		.footer_navigation {
+			@include phone {
+				display: none;
+			}
 			display: flex;
 			justify-content: space-between;
 			align-items: baseline;
@@ -402,12 +452,14 @@ footer {
 				
 			}
 		.copyrights {
+			
 			margin-top: 50px;
 			text-align: right;
 			font-size: 1.2rem;
 			border-top: 1px solid #ffffff;
 		}
 		.copyrights::before {
+			
 			content: "";
 			border-top: 1px solid #999999;
 		}
